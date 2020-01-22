@@ -1,23 +1,36 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "A portfolio website by Alex, for Alex.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adbarc92/Portfolio.git"
-  },
-  "keywords": [
-    "Portfolio",
-    "React"
-  ],
-  "author": "Alex Barclay",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/adbarc92/Portfolio/issues"
-  },
-  "homepage": "https://github.com/adbarc92/Portfolio#readme"
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "A portfolio website by Alex, for Alex.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "npm run sass & webpack --mode=development",
+        "watch": "npm run sass & webpack -w --mode=development",
+        "server": "nodemon server/index.js",
+        "start": "npm run build && npm run server",
+        "sass": "node-sass --include-path scss src/scss/main.scss public/css/main.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/adbarc92/Portfolio.git"
+    },
+    "keywords": [
+        "Portfolio",
+        "React"
+    ],
+    "author": "Alex Barclay",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/adbarc92/Portfolio/issues"
+    },
+    "homepage": "https://github.com/adbarc92/Portfolio#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "morgan": "^1.9.1",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "sass": "^1.25.0",
+        "webpack": "^4.41.5"
+    }
 }
