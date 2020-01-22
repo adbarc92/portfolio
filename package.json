@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio website by Alex, for Alex.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adbarc92/Portfolio.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "React"
+  ],
+  "author": "Alex Barclay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adbarc92/Portfolio/issues"
+  },
+  "homepage": "https://github.com/adbarc92/Portfolio#readme"
+}
