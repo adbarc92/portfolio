@@ -9,7 +9,10 @@
         "watch": "npm run sass & webpack -w --mode=development",
         "server": "nodemon server/index.js",
         "start": "npm run build && npm run server",
-        "sass": "node-sass --include-path scss src/scss/main.scss public/css/main.css"
+        "sass": "node-sass --include-path scss src/scss/main.scss public/css/main.css",
+        "clean": "rm -rf node_modules",
+        "reinstall": "npm run clean && npm install",
+        "rebuild": "npm run clean && npm install && npm run build"
     },
     "repository": {
         "type": "git",
@@ -32,7 +35,8 @@
         "react-dom": "^16.12.0",
         "react-router-dom": "^5.1.2",
         "sass": "^1.25.0",
-        "webpack": "^4.41.5"
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
     },
     "devDependencies": {
         "@babel/core": "^7.8.3",
