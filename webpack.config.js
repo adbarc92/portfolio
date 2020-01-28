@@ -6,29 +6,35 @@ module.exports = {
 		rules: [
 			{
 				test: /\.jsx?$/,
+				include: path.resolve(__dirname,'src')
 				exclude: /node_modules/,
 				loader: 'babel-loader',
+				options: {
+					presets: ['@babel/env', '@babel/react'],
+				},
 			},
 			{
 				test: /\.js$/,
 				include: path.resolve(__dirname, 'src'),
 				loader: 'babel-loader',
 				options: {
-					presets: ['@babel/preset-env', '@babel/preset-react'],
+					presets: ['@babel/env', '@babel/react'],
 				},
 			},
 			{
 				test: /\.(scss|css)$/,
 				include: path.resolve(__dirname, 'src'),
-				use: [{
-					loader: 'style-loader',
-				},
-				{
-					loader: 'css-loader',
-				},
-				{
-					loader: 'sass-loader',
-				}],
+				use: [
+					{
+						loader: 'style-loader',
+					},
+					{
+						loader: 'css-loader',
+					},
+					{
+						loader: 'sass-loader',
+					},
+				],
 			},
 		],
 	},
