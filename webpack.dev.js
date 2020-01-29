@@ -7,43 +7,48 @@ module.exports = {
 	entry: './src/index',
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
 	},
 
 	module: {
 		rules: [
 			{
-				test: /\.js$/,
-				include: path.resolve(__dirname,'src'),
+				test: /\.(js|jsx)$/,
+				include: path.resolve(__dirname, 'src'),
 				exclude: /node_modules/,
 				loader: 'babel-loader',
 				options: {
-					presets: [
-						'@babel/preset-env', '@babel/preset-react'
-					]
-				}
+					presets: ['@babel/preset-env', '@babel/preset-react'],
+				},
 			},
 			{
-				test:/\.(sccs|css)$/,
-				include: path.resolve(__dirname,'src'),
+				test: /\.(sccs|css)$/,
+				include: path.resolve(__dirname, 'src'),
 				use: [
 					{
 						loader: 'style-loader',
 					},
 					{
-						loader: 'css-loader'
+						loader: 'css-loader',
 					},
 					{
-						loader: 'sass-loader'
+						loader: 'sass-loader',
 					},
-				]
-			}
-		]
+				],
+			},
+		],
 	},
 
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: 'public/index.html'
-		})
+			template: 'public/index.html',
+		}),
 	],
-}
+
+	resolve: {
+		alias: {
+			react: path.join(__dirname,'node_modules', 'react')
+		},
+		extensions: ['.js', '.jsx']
+	}
+};
