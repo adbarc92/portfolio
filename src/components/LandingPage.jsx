@@ -1,14 +1,18 @@
 import React from 'react';
 import NavigationBar from './NavigationBar';
+// import SideBar from './SideBar';
+import { Layout, Content, Header } from 'react-mdl';
 
 const LandingPage = () => {
 	return (
 		<div className="page-container">
-			<NavigationBar />
-			<img className='landing-img' />
-			<h1 className='landing-header'>Landing Page</h1>
-			<div className='landing-content'>Page Content</div>
-			<div className='base-content'>Base Container</div>
+			<Layout>
+				<Header transparent title="Landing Page">
+					<NavigationBar />
+				</Header>
+				{/* <SideBar /> */}
+				<Content>Content</Content>
+			</Layout>
 		</div>
 	);
 }
