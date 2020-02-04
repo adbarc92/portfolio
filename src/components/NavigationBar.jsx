@@ -1,19 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Header, Navigation } from 'react-mdl';
+import { Navbar, Nav, NavItem, Col } from 'reactstrap';
 
 class NavigationBar extends React.Component {
 	render(){
 		return (
-			<Navigation>
-				<Link className='left-links' to="/Projects">Projects</Link>
-				<Link className='left-links' to="/Contact">Contact</Link>
-				<Link className='left-links' to="/About">About</Link>
-				<Link className='left-links' to="/Blog">Blog</Link>
-				<Link className='right-links' to="/">Symbol</Link>
-				<Link className='right-links' to="/">LinkedIn</Link>
-				<Link className='right-links' to="/">GitHub</Link>
-			</Navigation>
+			<Navbar>
+				<Nav className='naviagation-bar'>
+					<Col>
+						<NavItem className="left-link">
+							<Link to="/Projects">Projects</Link>
+						</NavItem>
+						<NavItem className="left-link">
+							<Link to="/Contact">Contact</Link>
+						</NavItem>
+						<NavItem className="left-link">
+							<Link to="/About">About</Link>
+						</NavItem>
+						<NavItem className="left-link">
+							<Link to="/Blog">Blog</Link>
+						</NavItem>
+					</Col>
+					<Col>
+						<NavItem className="right-link">LinkedIn</NavItem>
+						<NavItem className="right-link">GitHub</NavItem>
+						<NavItem className="right-link">
+							<Link to="/Home"></Link>
+						</NavItem>
+					</Col>
+				</Nav>
+			</Navbar>
 		);
 	}
 };
