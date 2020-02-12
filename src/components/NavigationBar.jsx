@@ -1,37 +1,51 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, NavItem, Col } from 'reactstrap';
+import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core';
+import { MenuIcon, EditIcon, SaveIcon, MoreVertIcon } from '@material-ui/icons';
+import { withStyles } from '@material-ui/styles';
 
-class NavigationBar extends React.Component {
-	render(){
-		return (
-			<Navbar>
-				<Nav className='naviagation-bar'>
-					<Col>
-						<NavItem className="left-link">
-							<Link to="/Projects">Projects</Link>
-						</NavItem>
-						<NavItem className="left-link">
-							<Link to="/Contact">Contact</Link>
-						</NavItem>
-						<NavItem className="left-link">
-							<Link to="/About">About</Link>
-						</NavItem>
-						<NavItem className="left-link">
-							<Link to="/Blog">Blog</Link>
-						</NavItem>
-					</Col>
-					<Col>
-						<NavItem className="right-link">LinkedIn</NavItem>
-						<NavItem className="right-link">GitHub</NavItem>
-						<NavItem className="right-link">
-							<Link to="/Home"></Link>
-						</NavItem>
-					</Col>
-				</Nav>
-			</Navbar>
-		);
-	}
+const styles = {
+	rightToolbar: {
+		marginLeft: 'auto',
+		marginRight: -12,
+	},
+	menuButton: {
+		marginLeft: -12,
+		marginRight: 16,
+	},
 };
 
-export default NavigationBar;
+const NavigationBar = ({ classes }) => (
+		<AppBar position="static">
+			<Toolbar>
+				<IconButton
+					className={classes.menuButton}
+					aria-label="Menu"
+					color="inherit"
+				>
+					<MenuIcon />
+				</IconButton>
+				<Typography variant="h1" color="inherit">
+					Title
+				</Typography>
+				<section className={classes.rightToolbar}>
+					<IconButton color="inherit" aria-label="Edit">
+						<EditIcon />
+					</IconButton>
+					<IconButton color="inherit" aria-label="Save">
+						<SaveIcon />
+					</IconButton>
+					<IconButton color="inherit" aria-label="More Options">
+						<MoreVertIcon />
+					</IconButton>
+				</section>
+			</Toolbar>
+		</AppBar>
+);
+
+NavigationBar.propTypes = {
+	classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(NavigationBar);
