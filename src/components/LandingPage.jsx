@@ -1,10 +1,12 @@
 import React from 'react';
-import NavigationBar from './NavigationBar';
+// import NavBar from './NavBar'
+import Demo from './MUI-Nav';
 
 const LandingPage = () => {
 	return (
 		<div className="page-container">
-			<NavigationBar />
+			{/* <NavBar /> */}
+			<Demo />
 		</div>
 	);
 }
