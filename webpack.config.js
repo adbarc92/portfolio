@@ -1,24 +1,24 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	context: path.join(__dirname, '/src'),
+	mode: 'development',
+	devtool: 'inline-source-map',
+	entry: './src/index',
+	output: {
+		filename: 'bundle.js',
+		path: path.resolve(__dirname, 'dist'),
+	},
+
 	module: {
 		rules: [
 			{
-				test: /\.jsx?$/,
-				include: path.resolve(__dirname,'src')
+				test: /\.(js|jsx)$/,
+				include: path.resolve(__dirname, 'src'),
 				exclude: /node_modules/,
 				loader: 'babel-loader',
 				options: {
-					presets: ['@babel/env', '@babel/react'],
-				},
-			},
-			{
-				test: /\.js$/,
-				include: path.resolve(__dirname, 'src'),
-				loader: 'babel-loader',
-				options: {
-					presets: ['@babel/env', '@babel/react'],
+					presets: ['@babel/preset-env', '@babel/preset-react'],
 				},
 			},
 			{
@@ -38,18 +38,25 @@ module.exports = {
 			},
 		],
 	},
-	entry: {
-		javascript: './index',
-	},
+
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: 'public/index.html',
+		}),
+	],
+
 	resolve: {
 		alias: {
 			react: path.join(__dirname, 'node_modules', 'react'),
 		},
-		extensions: ['.js', '.jsx', '.scss'],
+		extensions: ['.js', '.jsx'],
 	},
-	output: {
-		filename: 'bundle.js',
-		path: path.resolve(__dirname, './../dist'),
+	devServer: {
+		contentBase: path.join(__dirname, 'dist', 'public'),
+		compress: true,
+		hot: true,
+		liveReload: true,
+		open: true,
+		openPage: '',
 	},
-	mode: 'development',
 };

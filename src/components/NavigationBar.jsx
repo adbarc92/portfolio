@@ -17,31 +17,31 @@ const styles = {
 };
 
 const NavigationBar = ({ classes }) => (
-		<AppBar position="static">
-			<Toolbar>
-				<IconButton
-					className={classes.menuButton}
-					aria-label="Menu"
-					color="inherit"
-				>
-					<MenuIcon />
+	<AppBar position="static">
+		<Toolbar>
+			<IconButton
+				className={classes.menuButton}
+				aria-label="Menu"
+				color="inherit"
+			>
+				<MenuIcon />
+			</IconButton>
+			<Typography variant="h1" color="inherit">
+				Title
+			</Typography>
+			<section className={classes.rightToolbar}>
+				<IconButton color="inherit" aria-label="Edit">
+					<EditIcon />
 				</IconButton>
-				<Typography variant="h1" color="inherit">
-					Title
-				</Typography>
-				<section className={classes.rightToolbar}>
-					<IconButton color="inherit" aria-label="Edit">
-						<EditIcon />
-					</IconButton>
-					<IconButton color="inherit" aria-label="Save">
-						<SaveIcon />
-					</IconButton>
-					<IconButton color="inherit" aria-label="More Options">
-						<MoreVertIcon />
-					</IconButton>
-				</section>
-			</Toolbar>
-		</AppBar>
+				<IconButton color="inherit" aria-label="Save">
+					<SaveIcon />
+				</IconButton>
+				<IconButton color="inherit" aria-label="More Options">
+					<MoreVertIcon />
+				</IconButton>
+			</section>
+		</Toolbar>
+	</AppBar>
 );
 
 NavigationBar.propTypes = {

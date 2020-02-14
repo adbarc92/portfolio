@@ -6,18 +6,20 @@ import ContactPage from './components/ContactPage.jsx';
 import BlogPage from './components/BlogPage.jsx';
 import ProjectsPage from './components/ProjectsPage.jsx';
 
+import './scss/styles.scss';
+
 const App = () => {
 	return (
 		<Router>
 			<Switch>
-				<Route exact path='/' component={ LandingPage }></Route>
-				<Route path='/About' component={ AboutPage }></Route>
-				<Route path='/Contact' component={ ContactPage }></Route>
-				<Route path='/Blog' component={ BlogPage }></Route>
-				<Route path='/Projects' component={ ProjectsPage }></Route>
+				<Route exact path="/" component={LandingPage}></Route>
+				<Route path="/About" component={AboutPage}></Route>
+				<Route path="/Contact" component={ContactPage}></Route>
+				<Route path="/Blog" component={BlogPage}></Route>
+				<Route path="/Projects" component={ProjectsPage}></Route>
 			</Switch>
 		</Router>
 	);
-}
+};
 
 export default App;
