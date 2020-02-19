@@ -6,6 +6,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import EditIcon from '@material-ui/icons/Edit';
 import SaveIcon from '@material-ui/icons/Save';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+// import { MenuIcon, EditIcon, SaveIcon, MoreVertIcon } from '@material-ui/icons';
 import { withStyles } from '@material-ui/styles';
 
 const styles = {
@@ -30,16 +33,16 @@ const Demo = ({ classes }) => (
 			>
 				<MenuIcon />
 			</IconButton>
-			<Typography variant="h1" color="inherit">
+			<Typography variant="h4" color="inherit">
 				Title
 			</Typography>
 
 			<section className={classes.rightToolbar}>
 				<IconButton color="inherit" aria-label="Edit">
-					<EditIcon />
+					<GitHubIcon />
 				</IconButton>
 				<IconButton color="inherit" aria-label="Save">
-					<SaveIcon />
+					<LinkedInIcon />
 				</IconButton>
 				<IconButton color="inherit" aria-label="More Options">
 					<MoreVertIcon />
