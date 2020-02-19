@@ -1,11 +1,19 @@
 import React from 'react';
-// import NavBar from './NavBar'
-import Demo from './MUI-Nav';
+import NavigationBar from './NavigationBar';
+import Symbol from '../../public/assets/Symbol.svg';
 
 const LandingPage = () => {
+	const home = false;
+	const handleClick = () => {
+		home = !home;
+	};
 	return (
 		<div className="page-container">
-			<Demo />
+			<NavigationBar
+				pageTitle={'Landing'}
+				handleClick={handleClick}
+				home={home}
+			/>
 		</div>
 	);
 };
