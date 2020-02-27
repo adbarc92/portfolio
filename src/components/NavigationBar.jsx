@@ -1,5 +1,11 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
+
+// import Symbol from '../../public/assets/Symbol.svg';
+import Symbol from './Symbol';
+import TemporaryDrawer from './SideBar';
+
 import {
 	AppBar,
 	Toolbar,
@@ -7,14 +13,6 @@ import {
 	IconButton,
 	Icon,
 } from '@material-ui/core';
-// import {
-// 	MenuIcon,
-// 	EditIcon,
-// 	SaveIcon,
-// 	MoreVertIcon,
-// 	LinkedInIcon,
-// 	GitHubIcon,
-// } from '@material-ui/icons';
 
 import MenuIcon from '@material-ui/icons/Menu';
 import EditIcon from '@material-ui/icons/Edit';
@@ -24,9 +22,6 @@ import HomeIcon from '@material-ui/icons/Home';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import SvgIcon from '@material-ui/core/SvgIcon';
-
-import Symbol from '../../public/assets/Symbol.svg';
-
 import { withStyles, withTheme } from '@material-ui/styles';
 
 const styles = {
@@ -44,61 +39,34 @@ const styles = {
 	},
 };
 
-const MyIcon = props => {
-	return <IconButton icon={<img src={Symbol} />} label="TEST" />;
-};
-
-const HouseIcon = () => {
+const NavigationBar = ({ classes, pageTitle, home, handleClick }) => {
 	return (
-		<IconButton>
-			<HomeIcon className={classes.homeButton} color="inherit" />
-		</IconButton>
+		<AppBar position="static">
+			<Toolbar>
+				<IconButton
+					className={classes.menuButton}
+					aria-label="Menu"
+					color="inherit"
+				>
+					<MenuIcon />
+				</IconButton>
+				<Typography variant="h4" color="inherit" onClick={handleClick}>
+					{pageTitle}
+				</Typography>
+
+				<section className={classes.rightToolbar}>
+					<IconButton color="inherit" aria-label="Edit">
+						<GitHubIcon />
+					</IconButton>
+					<IconButton color="inherit" aria-label="Save">
+						<LinkedInIcon />
+					</IconButton>
+					{HouseIcon(classes)}
+				</section>
+			</Toolbar>
+		</AppBar>
 	);
 };
-
-{
-	/* <Tab icon={<img src={Symbol}></img>} label="TEST" />; */
-}
-
-// Destructure all specific props
-const NavBar = ({ firstProp, secondProp, etc }) => {
-	console.log(firstProp);
-	// Hooks can also be used here
-	return (
-		<div>
-			<div>
-				<div></div>
-			</div>
-		</div>
-	);
-};
-
-const NavigationBar = ({ classes, pageTitle, home, handleClick }) => (
-	<AppBar position="static">
-		<Toolbar>
-			<IconButton
-				className={classes.menuButton}
-				aria-label="Menu"
-				color="inherit"
-			>
-				<MenuIcon />
-			</IconButton>
-			<Typography variant="h4" color="inherit" onClick={handleClick}>
-				{pageTitle}
-			</Typography>
-
-			<section className={classes.rightToolbar}>
-				<IconButton color="inherit" aria-label="Edit">
-					<GitHubIcon />
-				</IconButton>
-				<IconButton color="inherit" aria-label="Save">
-					<LinkedInIcon />
-				</IconButton>
-				{home == true ? HouseIcon() : MyIcon()}
-			</section>
-		</Toolbar>
-	</AppBar>
-);
 
 NavigationBar.propTypes = {
 	classes: PropTypes.object.isRequired,

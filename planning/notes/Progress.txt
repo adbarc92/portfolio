@@ -1,0 +1,16 @@
+================ Remaining Tasks ================
+
+1. Finish formal design mockup.
+2. NavBar (Header)
+	a. Custom Home Icon
+	b. Transparent
+	c. Refactor to allow for destructured imports
+3. Landing Page Body
+	a. Asymmetrical Background
+4. Drawer
+	a. Icons
+5. Footer
+6. Battle Background
+
+
+================ Completed Tasks ================

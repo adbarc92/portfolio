@@ -1,0 +1,30 @@
+================ Conceptual Suggestions ================
+
+Ben: Terminal-esque
+Giuseppe: D&D Character Sheet
+
+================ General Design Notes ================
+    Pages:
+        Blog: needs to be started and updated regularly; content: 
+        Contact: Email, Phone, GitHub, Photo
+            GitHub: literally just a link
+        Projects: documents/work
+        About:
+            Skills
+            Timeline/History
+    Potential Pages:
+        Writing
+        Photos/Travel
+    Features:
+        NavBar/Top
+        NavBar/Bottom
+        Sub-buttons
+        Scroll-handling: bar follows just offscreen until 50% down; upscrolling causes the bar to appear
+
+================ Colors & Shapes ================
+
+Color Scheme: Navy(1b2a49), Blue(465881), Teal(00909e), Silver(c9d1d3)
+
+Landing Page: 
+	Top Shape: clip-path: polygon(100% 15%, 0 72%, 0 15%)
+	Bottom Shape: clip-path: polygon(100% 15%, 0 72%, 100% 72%)
