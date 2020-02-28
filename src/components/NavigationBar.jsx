@@ -61,7 +61,6 @@ const NavigationBar = ({ classes, pageTitle, home, handleClick }) => {
 					<IconButton color="inherit" aria-label="Save">
 						<LinkedInIcon />
 					</IconButton>
-					{HouseIcon(classes)}
 				</section>
 			</Toolbar>
 		</AppBar>
