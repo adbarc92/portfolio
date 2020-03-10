@@ -22,35 +22,38 @@ const styles = {
 	triangleLeft: {
 		position: 'relative',
 		backgroundColor: '#465881',
-		clipPath: 'polygon(68% 75%, 0 75%, 0 41%)',
-		width: '65%',
-		height: '50%',
+		clipPath: 'polygon(100% 100%, 0 100%, 0 0%)',
+		width: '80%',
+		height: '75.5%',
 		display: 'flex',
 		zIndex: '1',
+		bottom: '10.8em',
 	},
 	triangleRight: {
 		zIndex: '1',
+		position: 'relative',
+		backgroundColor: '#465881',
+		clipPath: 'polygon(50% 50%, 100% 75%, 100% 25%)',
 	},
 	triangleTop: {
 		position: 'relative',
 		backgroundColor: '#465881',
-		clipPath: 'polygon(50% 100%, 0% 0, 100% 0)',
+		clipPath: 'polygon(50% 107%, 0% 0, 100% 0)',
 		marginRight: '10%',
 		marginLeft: '10%',
 		height: '35%',
 		zIndex: '1',
 	},
 	rect: {
-		width: '80%',
-		height: '80%',
-		backgroundColor: 'black',
-		position: 'absolute',
+		width: '100%',
+		height: '60%',
 		margin: '0 auto',
+		backgroundColor: 'black',
+		color: 'black',
 		zIndex: '0',
-		display: 'flex',
-		left: '10%',
-		top: '10%',
-		bottom: '10%'
+		left: '8em',
+		position: 'absolute',
+		top: '20%',
 	},
 };
 
@@ -67,7 +70,7 @@ const LandingPage = ({ classes }) => {
 				home={home}
 			/>
 			<div className={classes.content}>
-			<div className={classes.rect}></div>
+				<div className={classes.rect}></div>
 				<div className={classes.triangleTop}></div>
 				<div className={classes.triangleRight}></div>
 				<div className={classes.triangleLeft}></div>
