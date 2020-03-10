@@ -7,3 +7,28 @@ body {
 	height: 100%;
 	width: 100%;
 }
+
+#rectangle {
+	width: 76.5%;
+	height: 70%;
+	margin: 0 auto;
+	background-color: black;
+	position: relative;
+	top: 15%;
+}
+
+#triangle-top {
+	background-color: #465881;
+	clip-path: polygon(50% 107%, 0% 0, 100% 0);
+	z-index: 2;
+}
+#triangle-right {
+	background-color: #465881;
+	clip-path: polygon(50% 50%, 100% 75%, 100% 25%);
+	z-index: 2;
+}
+#triangle-left {
+	background-color: #465881;
+	clip-path: polygon(50% 50%, 100% 75%, 100% 25%);
+	z-index: 2;
+}

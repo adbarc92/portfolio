@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 // import Symbol from '../../public/assets/Symbol.svg';
 import Symbol from './Symbol';
-import TemporaryDrawer from './SideBar';
 
 import {
 	AppBar,
@@ -40,11 +39,11 @@ const styles = {
 	appBar: {
 		backgroundColor: '#1B2A49',
 		width: '100%',
-		height: '10%'
+		height: '10%',
 	},
 	toolBar: {
-		height: '100%'
-	}
+		height: '100%',
+	},
 };
 
 const NavigationBar = ({ classes, pageTitle, home, handleClick }) => {

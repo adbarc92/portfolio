@@ -37,23 +37,10 @@ const styles = {
 	},
 	triangleTop: {
 		position: 'relative',
-		backgroundColor: '#465881',
-		clipPath: 'polygon(50% 107%, 0% 0, 100% 0)',
 		marginRight: '10%',
 		marginLeft: '10%',
 		height: '35%',
 		zIndex: '1',
-	},
-	rect: {
-		width: '100%',
-		height: '60%',
-		margin: '0 auto',
-		backgroundColor: 'black',
-		color: 'black',
-		zIndex: '0',
-		left: '8em',
-		position: 'absolute',
-		top: '20%',
 	},
 };
 
@@ -70,10 +57,8 @@ const LandingPage = ({ classes }) => {
 				home={home}
 			/>
 			<div className={classes.content}>
-				<div className={classes.rect}></div>
-				<div className={classes.triangleTop}></div>
-				<div className={classes.triangleRight}></div>
-				<div className={classes.triangleLeft}></div>
+				<div id="rectangle"></div>
+				<div id="triangle-top"></div>
 			</div>
 			<NavigationFooter />
 		</div>
