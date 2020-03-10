@@ -37,12 +37,20 @@ const styles = {
 	homeButton: {
 		color: 'white',
 	},
+	appBar: {
+		backgroundColor: '#1B2A49',
+		width: '100%',
+		height: '10%'
+	},
+	toolBar: {
+		height: '100%'
+	}
 };
 
 const NavigationBar = ({ classes, pageTitle, home, handleClick }) => {
 	return (
-		<AppBar position="static">
-			<Toolbar>
+		<AppBar className={classes.appBar} position="static">
+			<Toolbar className={classes.toolBar}>
 				<IconButton
 					className={classes.menuButton}
 					aria-label="Menu"
@@ -50,9 +58,7 @@ const NavigationBar = ({ classes, pageTitle, home, handleClick }) => {
 				>
 					<MenuIcon />
 				</IconButton>
-				<Typography variant="h4" color="inherit" onClick={handleClick}>
-					{pageTitle}
-				</Typography>
+				<Typography variant="h4" color="inherit" onClick={handleClick} />
 
 				<section className={classes.rightToolbar}>
 					<IconButton color="inherit" aria-label="Edit">

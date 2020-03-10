@@ -4,6 +4,7 @@
 	a. Navigation Header
 		i. Custom Home Icon
 	b. Navigation/Information Footer
+		i. 
 	c. Drawer: left side, activated by "MoreVert" icon.
 		i. Links to all other pages
 		ii. Corresponding icons
@@ -12,6 +13,7 @@
 	a. Landing
 		i. The main set of links are intended to be verbs
 		ii. The inset triangles (containing images) should be congruent with outer triangles and share centerpoints
+		iii. The verb-links should indicate that they are clickable on hover (glow?)
 	b. Play
 		i. Border
 		ii. React-Canvas or C++
