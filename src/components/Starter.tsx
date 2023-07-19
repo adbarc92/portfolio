@@ -1,13 +1,15 @@
 import React from 'react';
 import logo from '../logo.svg';
 
-const Starter = () => {
+export interface StarterProps {
+  greetingText: String;
+}
+
+const Starter = ({ greetingText }: StarterProps): JSX.Element => {
   return (
     <header className='App-header'>
       <img src={logo} className='App-logo' alt='logo' />
-      <p>
-        Edit <code>src/App.tsx</code> and STILL CLOSED.
-      </p>
+      <p>{greetingText}</p>
       <a
         className='App-link'
         href='https://reactjs.org'

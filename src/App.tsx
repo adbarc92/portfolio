@@ -1,14 +1,14 @@
 import React from 'react';
 
-import './App.css';
-import Starter from './components/Basic';
-import Header from './components/Header';
+import 'src/App.css';
+import Starter from 'src/components/Starter';
+import Header from 'src/components/Header';
 
 function App() {
   return (
     <div className='App'>
       <Header />
-      <Starter />
+      <Starter greetingText='Told myself to boogie more' />
     </div>
   );
 }
