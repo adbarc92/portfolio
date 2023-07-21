@@ -1,30 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // If you're using React Router for navigation
 
 const Header = () => {
   return (
     <header>
       <nav>
         {/* Your logo or brand */}
-        <Link to='/'>Your Logo</Link>
+        <li>// Logo</li>
 
         {/* Navigation menu */}
         <ul>
           <li>
-            <Link to='/'>Home</Link>
+            <li>// Home</li>
           </li>
           <li>
-            <Link to='/portfolio'>Portfolio</Link>
+            <li>// Portfolio</li>
           </li>
           <li>
-            <Link to='/blog'>Blog</Link>
+            <li>// Blog</li>
           </li>
           <li>
-            <Link to='/about'>About</Link>
+            <li>// About</li>
           </li>
-          <li>
-            <Link to='/contact'>Contact</Link>
-          </li>
+          <li>// Contact</li>
         </ul>
       </nav>
     </header>
