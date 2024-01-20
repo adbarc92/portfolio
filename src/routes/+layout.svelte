@@ -1,5 +1,5 @@
 <script>
-	import Header from './Header.svelte';
+	import Header from '../components/Header.svelte';
 </script>
 
 <div class="app">
@@ -14,6 +14,6 @@
 	div main {
 		display: flex;
 		justify-content: center;
-		max-width: 80ch;
+		/* max-width: 80ch; */
 	}
 </style>
