@@ -4,9 +4,7 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>About me</h1>
+	<h1>About</h1>
 
-	<p>This is my first paragraph.</p>
-
-	<p>This is my second paragraph.</p>
+	<p>I am a philosopher.</p>
 </div>

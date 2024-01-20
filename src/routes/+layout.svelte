@@ -1,12 +1,19 @@
 <script>
-	import Header from "./Header.svelte";
-
+	import Header from './Header.svelte';
 </script>
 
 <div class="app">
-  <Header />
+	<Header />
 
-  <main>
-    <slot />
-  </main>
+	<main>
+		<slot />
+	</main>
 </div>
+
+<style>
+	div main {
+		display: flex;
+		justify-content: center;
+		max-width: 80ch;
+	}
+</style>
