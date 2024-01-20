@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import logo from '$lib/images/adb-icon.svg';
 </script>
 
@@ -7,12 +8,23 @@
 		<a href="/">
 			<img class="icon" src={logo} alt="ADB Logo" />
 		</a>
-		<div>
-			<a href="/about">About</a>
-			<a href="/thoughts">Thoughts</a>
-			<a href="/projects">Projects</a>
-			<a href="/contact">Contact</a>
-		</div>
+		<ul>
+			<li aria-current={$page.url.pathname === '/' ? 'page' : ''}>
+				<a href="/">Home</a>
+			</li>
+			<li aria-current={$page.url.pathname === '/about' ? 'page' : ''}>
+				<a href="/about">About</a>
+			</li>
+			<li aria-current={$page.url.pathname === '/thoughts' ? 'page' : ''}>
+				<a href="/thoughts">Thoughts</a>
+			</li>
+			<li aria-current={$page.url.pathname === '/projects' ? 'page' : ''}>
+				<a href="/projects">Projects</a>
+			</li>
+			<li aria-current={$page.url.pathname === '/connect' ? 'page' : ''}>
+				<a href="/connect">Connect</a>
+			</li>
+		</ul>
 	</nav>
 </header>
 
@@ -31,16 +43,24 @@
 		padding-right: 1em;
 	}
 
-	div {
+	ul {
 		display: flex;
 		align-items: center;
 		row-gap: 2em;
 		column-gap: 2em;
+		list-style-type: none;
 	}
 
 	a {
 		color: black;
 		text-decoration: none;
+		line-height: 1.25em;
+	}
+
+	li[aria-current='page'] {
+		text-decoration: underline overline;
+		text-decoration-style: solid;
+		text-underline-offset: 0.2em;
 	}
 
 	.icon {
