@@ -12,8 +12,8 @@
 
 <style>
 	div main {
-		display: flex;
-		justify-content: center;
-		/* max-width: 80ch; */
+		max-width: 80ch;
+		margin-left: auto;
+		margin-right: auto;
 	}
 </style>
